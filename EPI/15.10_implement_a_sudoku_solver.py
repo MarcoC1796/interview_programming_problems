@@ -2,11 +2,8 @@
 
 def solve_sudoku(partial_assignment):
     column_set_values = {i: set() for i in range(9)}
-    column_set_values = {i: set() for i in range(9)}
     row_set_values = {i: set() for i in range(9)}
     cell_set_values = {(i, j): set() for i in range(3) for j in range(3)}
-    max_row_col = (0, 0)
-    i = 0
 
     def test_validity(val, row, col):
         return not (val in column_set_values[col] or val in row_set_values[row] or val in cell_set_values[(row // 3, col // 3)])
@@ -53,8 +50,7 @@ def solve_sudoku(partial_assignment):
         return set_next_entry(next_row, next_col)
 
     initialize_sets()
-    result = set_next_entry(0, 0)
-    return result
+    return set_next_entry(0, 0)
 
 if __name__ == "__main__":
     partial_assignment = [[0, 3, 2, 0, 0, 0, 8, 0, 4], 
