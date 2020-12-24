@@ -2,6 +2,7 @@
 #          it's left and right subtrees is at most one. A perfect binary tree is height-balanced, as is a complete
 #          binary tree. A height-balanced tree does not have to be perfect or complete.
 #           Write a program that takes as input the root of a binary tree and checks whether the tree is height-balanced.
+
 from collections import namedtuple
 
 class BinaryTreeNode:
@@ -13,6 +14,7 @@ class BinaryTreeNode:
 # EPI Judge: is_tree_balanced.py
 def is_balanced_binary_tree(tree):
     Tree_balance = namedtuple("Tree_balance", ("is_balanced","height"))
+    
     def check_balance(tree):
         if not tree:
             return Tree_balance(True, -1) # (is_balanced?, height)
