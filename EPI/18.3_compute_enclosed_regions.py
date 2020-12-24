@@ -55,6 +55,7 @@ if __name__ == "__main__":
             ['W', 'B', 'W', 'W', 'W', 'W', 'B', 'W', 'W', 'B', 'W', 'W', 'W', 'B', 'B'], 
             ['B', 'W', 'W', 'B', 'W', 'W', 'W', 'W', 'B', 'W', 'B', 'W', 'W', 'W', 'W'], 
             ['W', 'W', 'B', 'W', 'B', 'B', 'W', 'W', 'W', 'W', 'B', 'W', 'B', 'W', 'W']]
+            
     for row in board:
         print(row)
     board = fill_surrounded_regions(board)
