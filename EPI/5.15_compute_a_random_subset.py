@@ -23,4 +23,7 @@ def random_subset(n, k):
             visited_indexes[rand_index] = i
 
     return subset
+
+if __name__ == "__main__":
+    print(random_subset(10,3))
         
